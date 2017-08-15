@@ -14,11 +14,12 @@
 
 .header {
     background-color: $header-bg;
-    border-bottom: container("border");
     position: fixed;
     top: 0;
     width: 100%;
     z-index: zIndex("low");
+    padding: 20px 0 30px 0;
+    margin-bottom: 5px;
 
     @include breakpoint("medium") {
         border-bottom: container("border");

@@ -5,6 +5,322 @@
     </div>
 </div>
 {{/if}}
+
+
+<style>
+
+    /* All Full Width */
+    body {
+        color: #444;
+        font-size: 12px;
+        line-height: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-size-adjust: 100%;
+    }
+    .row {
+        display: block;
+    }
+    .row:after {
+        clear: both;
+        display: table;
+        line-height: 0;
+        content: "";
+    }
+    .header {
+        border: none;
+        background: url(../assets/img/mmam/header-line.png) bottom left repeat-x;
+    }
+    .header-container {
+        max-width: 940px;
+        padding: 0;
+        margin: 0 auto;
+    }
+    .header-brand {
+        width: 210px;
+        height: 84px;
+        float: left;
+        margin: 0px;
+    }
+    .header-tagline {
+        width: 490px;
+        float: left;
+        margin: 0px;
+    }
+    .header-tagline h2 {
+        color: #839cb2;
+        text-align: right;
+        font-family: 'Segoe UI',Arial,Helvetica,sans-serif;
+        font-weight: normal;
+        text-rendering: optimizelegibility;
+        letter-spacing: -0.03em;
+        margin: 0;
+        font-size: 28px;
+        line-height: 82px;
+    }
+    .header-social {
+        width: 240px;
+        float: right;
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+    .header-social .scohial {
+        margin-bottom: 6px;
+    }
+    .header-social ul {
+        font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #23425e;
+        list-style: none;
+        float: right;
+        margin: 0;
+    }
+    .header-social ul li {
+        float: left;
+        margin-left: 2px;
+        list-style: none;
+    }
+    .header-hours {
+        color: #839cb2;
+        float: right;
+        font-size: 14px;
+    }
+    .menuarea {
+        float: left;
+        width: 100%;
+        position: relative;
+        z-index: 903;
+        background-color: #FFFFFF;
+        min-height: 40px;
+    }
+    #standardMenu {
+        margin: 0 8px 0 -5px;
+        position: relative;
+        z-index: 903;
+    }
+    #standardMenu ul {
+        margin: 0;
+        padding: 0;
+    }
+    #standardMenu ul li {
+        list-style: none;
+        float: left;
+        background: none;
+        overflow: visible;
+        position: relative;
+        cursor: pointer;
+    }
+    #standardMenu ul li a {
+        display: block;
+        background: none;
+        text-decoration: none;
+        font-family: "SegoeUISemibold";
+        font-size: 17px;
+        letter-spacing: 2px;
+        color: #28445e;
+        text-decoration: none;
+        text-shadow: 0 0 0;
+    }
+    #standardMenu ul li a div {
+        display: block;
+        background: none;
+    }
+    #standardMenu ul li.selected a div span,
+    #standardMenu ul li.breadcrumb a div span {
+        color: #C88522;
+    }
+    #standardMenu ul li.selected ul,
+    #standardMenu ul li.breadcrumb ul {
+        display: none;
+        position: absolute;
+        top: 41px;
+        left: 1px;
+        border: 5px solid #C5D0DA;
+        border-radius: 6px;
+    }
+    #standardMenu ul li ul li.first {
+        border-top: none;
+    }
+    #standardMenu ul li ul li {
+        background: #FFFFFF;
+        margin: 0px;
+        white-space: normal;
+        height: auto;
+        line-height: 1.5em;
+        width: 180px;
+    }
+    .breadcrumb {
+        text-transform: uppercase;
+        padding: 12px 15px;
+        margin: 0 0 20px;
+        list-style: none;
+        color: #839cb5;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        background: url(../assets/img/mmam/breaddivider.png) left no-repeat;
+        float: left;
+        padding-left: 26px;
+    }
+
+    /* Medium Width */
+    @media (max-width: 979px) and (min-width: 768px) {
+
+    }
+
+    /* Small Width */
+    @media (max-width: 766px) {
+
+    }
+
+    /* Nav change */
+    @media handheld, only screen and (max-width: 760px) {
+
+    }
+
+    /* X-small Width */
+    @media (max-width: 486px) {
+
+    }
+
+</style>
+
+
+<!--<div class="header">-->
+    <!--<div class="row">-->
+        <!--<div class="span9">-->
+            <!--<h1 class="logo"><a id="dnn_dnnLOGO_hypLogo" title="Minnesota Marine Art Museum" href="http://www.mmam.org/"><img id="dnn_dnnLOGO_imgLogo" src="/Portals/0/logo.png" alt="Minnesota Marine Art Museum" style="border-width:0px;"></a></h1>-->
+            <!--<h2 class="slogun2 text-center">Great Art Inspired by Water</h2>-->
+        <!--</div>-->
+        <!--<div class="span3">-->
+            <!--<div class="row">-->
+                <!--<ul class="scohial pull-right">-->
+                    <!--<li><a href="https://www.facebook.com/pages/Minnesota-Marine-Art-Museum/190926643382" target="_blank"><img src="/Portals/_default/Skins/MMAM/img/social_facebook_off.png" onmouseover="this.src='/Portals/_default/Skins/MMAM/img/social_facebook_on.png'" onmouseout="this.src='/Portals/_default/Skins/MMAM/img/social_facebook_off.png'" alt=""> </a></li>-->
+                    <!--<li><a href="https://twitter.com/MMAMArtStream" target="_blank"><img src="/Portals/_default/Skins/MMAM/img/social_twitter_off.png" onmouseover="this.src='/Portals/_default/Skins/MMAM/img/social_twitter_on.png'" onmouseout="this.src='/Portals/_default/Skins/MMAM/img/social_twitter_off.png'" alt=""> </a></li>-->
+                    <!--<li><a href="/Interact/MMAM-Art-Stream"><img src="/Portals/_default/Skins/MMAM/img/social_rss_off.png" onmouseover="this.src='/Portals/_default/Skins/MMAM/img/social_rss_on.png'" onmouseout="this.src='/Portals/_default/Skins/MMAM/img/social_rss_off.png'" alt=""> </a></li>-->
+                    <!--<li><a href="/Learn/Calendar"><img src="/Portals/_default/Skins/MMAM/img/social_calendar_off.png" onmouseover="this.src='/Portals/_default/Skins/MMAM/img/social_calendar_on.png'" onmouseout="this.src='/Portals/_default/Skins/MMAM/img/social_calendar_off.png'" alt=""> </a></li>-->
+                <!--</ul>-->
+            <!--</div>-->
+            <!--<div class="row tright">Hours: Tuesday - Sunday, 10am - 5pm</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<div class="header-container">
+    <div class="header">
+        <div class="row">
+            <div class="header-brand">
+                <a href="#" title=Minnesota Marine Art Museum">
+                <img src="http://www.mmam.org/Portals/0/logo.png" alt="Minnesota Marine Art Museum">
+                </a>
+            </div>
+            <div class="header-tagline">
+                <h2>GREAT ART INSPIRED BY WATER</h2>
+            </div>
+            <div class="header-social">
+                <ul class="scohial pull-right">
+                    <li>
+                        <a href="https://www.facebook.com/pages/Minnesota-Marine-Art-Museum/190926643382" target="_blank">
+                            <img src="http://www.mmam.org/Portals/_default/Skins/MMAM/img/social_facebook_off.png" onmouseover="this.src='http://www.mmam.org/Portals/_default/Skins/MMAM/img/social_facebook_on.png'" onmouseout="this.src='http://www.mmam.org/Portals/_default/Skins/MMAM/img/social_facebook_off.png'" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/MMAMArtStream" target="_blank">
+                            <img src="http://www.mmam.org/Portals/_default/Skins/MMAM/img/social_twitter_off.png" onmouseover="this.src='http://www.mmam.org/Portals/_default/Skins/MMAM/img/social_twitter_on.png'" onmouseout="this.src='http://www.mmam.org/Portals/_default/Skins/MMAM/img/social_twitter_off.png'" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Interact/MMAM-Art-Stream">
+                            <img src="http://www.mmam.org/Portals/_default/Skins/MMAM/img/social_rss_off.png" onmouseover="this.src='http://www.mmam.org/Portals/_default/Skins/MMAM/img/social_rss_on.png'" onmouseout="this.src='http://www.mmam.org/Portals/_default/Skins/MMAM/img/social_rss_off.png'" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Learn/Calendar">
+                            <img src="http://www.mmam.org/Portals/_default/Skins/MMAM/img/social_calendar_off.png" onmouseover="this.src='http://www.mmam.org/Portals/_default/Skins/MMAM/img/social_calendar_on.png'" onmouseout="this.src='http://www.mmam.org/Portals/_default/Skins/MMAM/img/social_calendar_off.png'" alt="">
+                        </a>
+                    </li>
+                </ul>
+                <div class="header-hours">
+                    Hours: Tuesday - Sunday, 10am - 5pm
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<header class="header-nav-bar">
+    <div class="container">
+        <div class="row">
+            <div class="header-nav col-md-12 col-sm-7 col-xs-2">
+
+            </div>
+        </div>
+    </div>
+</header>
+<div class="row">
+    <div class="span12">
+        <div id="skin_menu">
+            <div id="mobile_nav">
+                <div class="mobile_nav_bg">
+                    <a href="#" id="menuclick">MENU</a>
+                </div>
+            </div>
+            <div id="menuarea">
+                <!-- DDRmenu v02.00.01 - StandardMenu template --><div id="standardMenu">
+                <ul class="rootMenu">
+                    <li class="item selected first breadcrumb haschild"><a href="http://www.mmam.org/"><div><span>Visit</span></div></a><ul class="level0">
+                        <li class="item first"><a href="http://www.mmam.org/Visit/Location-Hours-Admission">Location, Hours &amp; Admission</a></li>
+                        <li class="item"><a href="http://www.mmam.org/Visit/About">About</a></li>
+                        <li class="item"><a href="http://www.mmam.org/Visit/Collections">Collections</a></li>
+                        <li class="item"><a href="http://www.mmam.org/Visit/Current-Upcoming-Exhibitions">Current &amp; Upcoming Exhibitions</a></li>
+                        <li class="item"><a href="http://www.mmam.org/Visit/Previous-Exhibitions">Previous Exhibitions</a></li>
+                        <li class="item"><a href="http://www.mmam.org/Visit/Gardens">Gardens</a></li>
+                        <li class="item"><a href="http://www.mmam.org/Visit/Tips-for-Visiting-with-Children">Tips for Visiting with Children</a></li>
+                        <li class="item last"><a href="http://www.mmam.org/Visit/FAQ">FAQ</a></li>
+                    </ul>
+                    </li>
+                    <li class="item haschild"><a href="http://www.mmam.org/Learn"><div><span>Learn</span></div></a><ul class="level0">
+                        <li class="item first"><a href="http://www.mmam.org/Learn/Calendar">Calendar</a></li>
+                        <li class="item"><a href="http://www.mmam.org/Learn/What-Happens-on-a-School-Tour">What Happens on a School Tour</a></li>
+                        <li class="item"><a href="http://www.mmam.org/Learn/Adult-Programs">Adult Programs</a></li>
+                        <li class="item"><a href="http://www.mmam.org/Learn/Family-Programs">Family Programs</a></li>
+                        <li class="item"><a href="http://www.mmam.org/Learn/Schedule-a-Tour">Schedule a Tour</a></li>
+                        <li class="item last"><a href="http://www.mmam.org/Learn/SPARK-Program-for-People-with-Memory-Loss">SPARK: Program for People with Memory Loss</a></li>
+                    </ul>
+                    </li>
+                    <li class="item haschild"><a href="http://www.mmam.org/Interact"><div><span>Interact</span></div></a><ul class="level0">
+                        <li class="item first"><a href="http://www.mmam.org/Interact/Online-Exhibitions">Online Exhibitions</a></li>
+                        <li class="item"><a href="http://www.mmam.org/Interact/Gallery-Interactives">Gallery Interactives</a></li>
+                        <li class="item"><a href="http://www.mmam.org/Interact/MMAM-Art-Stream-Blog">MMAM Art Stream Blog</a></li>
+                        <li class="item last"><a href="http://www.mmam.org/Interact/E-News-Sign-Up">E-News Sign-Up</a></li>
+                    </ul>
+                    </li>
+                    <li class="item haschild"><a href="http://www.mmam.org/Support"><div><span>Support</span></div></a><ul class="level0">
+                        <li class="item first"><a href="http://www.mmam.org/Support/Be-a-Member">Be a Member</a></li>
+                        <li class="item"><a href="http://www.mmam.org/Support/Be-a-Sustainer">Be a Sustainer</a></li>
+                        <li class="item"><a href="http://www.mmam.org/Support/Be-a-Benefactor">Be a Benefactor</a></li>
+                        <li class="item"><a href="http://www.mmam.org/Support/Be-a-Volunteer">Be a Volunteer</a></li>
+                        <li class="item last"><a href="http://www.mmam.org/Support-Our-Organizational-Members">Our Organizational Members</a></li>
+                    </ul>
+                    </li>
+                    <li class="item last"><a href="http://www.mmam.org/Shop"><div><span>Shop</span></div></a></li>
+                </ul>
+            </div>
+                <div class="breadcrumb">
+                    Current Page: &nbsp;
+                    <span id="dnn_BREADCRUMB1_lblBreadCrumb"><a href="http://www.mmam.org/" class="BreadcrumbToken">Visit</a></span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+
+
+</style>
+
+
 <header class="header" role="banner">
     <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
         <span class="mobileMenu-toggleIcon">Toggle menu</span>
