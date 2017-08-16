@@ -702,26 +702,6 @@
     "name": "Logo",
     "settings": [
       {
-        "type": "select",
-        "label": "Position",
-        "id": "logo-position",
-        "force_reload": true,
-        "options": [
-          {
-            "value": "right",
-            "label": "Right"
-          },
-          {
-            "value": "center",
-            "label": "Center"
-          },
-          {
-            "value": "left",
-            "label": "Left"
-          }
-        ]
-      },
-      {
         "type": "heading",
         "content": "Text based logo"
       },
@@ -2406,12 +2386,6 @@
         "type": "color",
         "label": "Background color",
         "id": "footer-backgroundColor"
-      },
-      {
-        "type": "checkbox",
-        "label": "Show &quot;Powered by BigCommerce&quot;",
-        "force_reload": true,
-        "id": "show_powered_by"
       },
       {
         "type": "checkbox",
