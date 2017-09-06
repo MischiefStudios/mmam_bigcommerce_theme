@@ -42,7 +42,7 @@
     }
     .header-container .header {
         border: none;
-        background: url(../assets/img/mmam/header-line.png) bottom left repeat-x;
+        background: url(http://www.mmam.org/portals/_default/skins/mmam/img/header-line.png) bottom left repeat-x; /*../assets/img/mmam/header-line.png*/
         padding: 20px 0 30px 0;
         margin-bottom: 5px;
     }
@@ -247,6 +247,14 @@
         color: #28445e;
         background-color: #C5D0DA;
     }
+    ul.navPages-list {
+        margin-top: 20px;
+    }
+    .navPages-item a {
+        background-color: #ccc;
+        margin: 2px;
+        padding-bottom: 10px;
+    }
 
     /* Medium Width */
     @media (max-width: 979px) and (min-width: 768px) {
@@ -414,51 +422,60 @@
                     </div>
                 </div>
                 <div id="menuarea">
-                    <!-- DDRmenu v02.00.01 - StandardMenu template --><div id="standardMenu">
-                    <ul class="rootMenu">
-                        <li class="item first haschild"><a href="http://www.mmam.org/"><div><span>Visit</span></div></a><ul class="level0">
-                            <li class="item first"><a href="http://www.mmam.org/Visit/Location-Hours-Admission">Location, Hours &amp; Admission</a></li>
-                            <li class="item"><a href="http://www.mmam.org/Visit/About">About</a></li>
-                            <li class="item"><a href="http://www.mmam.org/Visit/Collections">Collections</a></li>
-                            <li class="item"><a href="http://www.mmam.org/Visit/Current-Upcoming-Exhibitions">Current &amp; Upcoming Exhibitions</a></li>
-                            <li class="item"><a href="http://www.mmam.org/Visit/Previous-Exhibitions">Previous Exhibitions</a></li>
-                            <li class="item"><a href="http://www.mmam.org/Visit/Gardens">Gardens</a></li>
-                            <li class="item"><a href="http://www.mmam.org/Visit/Tips-for-Visiting-with-Children">Tips for Visiting with Children</a></li>
-                            <li class="item last"><a href="http://www.mmam.org/Visit/FAQ">FAQ</a></li>
+                    <!-- DDRmenu v02.00.01 - StandardMenu template -->
+                    <div id="standardMenu">
+                        <ul class="rootMenu">
+                            <li class="item first haschild"><a href="http://www.mmam.org/"><div><span>Visit</span></div></a>
+                                <ul class="level0">
+                                    <li class="item first"><a href="http://www.mmam.org/Visit/Location-Hours-Admission">Location, Hours &amp; Admission</a></li>
+                                    <li class="item"><a href="http://www.mmam.org/Visit/About">About</a></li>
+                                    <li class="item"><a href="http://www.mmam.org/Visit/Collections">Collections</a></li>
+                                    <li class="item"><a href="http://www.mmam.org/Visit/Current-Upcoming-Exhibitions">Current &amp; Upcoming Exhibitions</a></li>
+                                    <li class="item"><a href="http://www.mmam.org/Visit/Previous-Exhibitions">Previous Exhibitions</a></li>
+                                    <li class="item"><a href="http://www.mmam.org/Visit/Gardens">Gardens</a></li>
+                                    <li class="item"><a href="http://www.mmam.org/Visit/Tips-for-Visiting-with-Children">Tips for Visiting with Children</a></li>
+                                    <li class="item last"><a href="http://www.mmam.org/Visit/FAQ">FAQ</a></li>
+                                </ul>
+                            </li>
+                            <li class="item haschild"><a href="http://www.mmam.org/Learn"><div><span>Learn</span></div></a>
+                                <ul class="level0">
+                                    <li class="item first"><a href="http://www.mmam.org/Learn/Calendar">Calendar</a></li>
+                                    <li class="item"><a href="http://www.mmam.org/Learn/What-Happens-on-a-School-Tour">What Happens on a School Tour</a></li>
+                                    <li class="item"><a href="http://www.mmam.org/Learn/Adult-Programs">Adult Programs</a></li>
+                                    <li class="item"><a href="http://www.mmam.org/Learn/Family-Programs">Family Programs</a></li>
+                                    <li class="item"><a href="http://www.mmam.org/Learn/Schedule-a-Tour">Schedule a Tour</a></li>
+                                    <li class="item last"><a href="http://www.mmam.org/Learn/SPARK-Program-for-People-with-Memory-Loss">SPARK: Program for People with Memory Loss</a></li>
+                                </ul>
+                            </li>
+                            <li class="item haschild"><a href="http://www.mmam.org/Interact"><div><span>Interact</span></div></a>
+                                <ul class="level0">
+                                    <li class="item first"><a href="http://www.mmam.org/Interact/Online-Exhibitions">Online Exhibitions</a></li>
+                                    <li class="item"><a href="http://www.mmam.org/Interact/Gallery-Interactives">Gallery Interactives</a></li>
+                                    <li class="item"><a href="http://www.mmam.org/Interact/MMAM-Art-Stream-Blog">MMAM Art Stream Blog</a></li>
+                                    <li class="item last"><a href="http://www.mmam.org/Interact/E-News-Sign-Up">E-News Sign-Up</a></li>
+                                </ul>
+                            </li>
+                            <li class="item haschild"><a href="http://www.mmam.org/Support"><div><span>Support</span></div></a>
+                                <ul class="level0">
+                                    <li class="item first"><a href="http://www.mmam.org/Support/Be-a-Member">Be a Member</a></li>
+                                    <li class="item"><a href="http://www.mmam.org/Support/Be-a-Sustainer">Be a Sustainer</a></li>
+                                    <li class="item"><a href="http://www.mmam.org/Support/Be-a-Benefactor">Be a Benefactor</a></li>
+                                    <li class="item"><a href="http://www.mmam.org/Support/Be-a-Volunteer">Be a Volunteer</a></li>
+                                    <li class="item last"><a href="http://www.mmam.org/Support-Our-Organizational-Members">Our Organizational Members</a></li>
+                                </ul>
+                            </li>
+                            <li class="item selected last"><a href="http://www.mmam.org/Shop"><div><span>Shop</span></div></a></li>
                         </ul>
-                        </li>
-                        <li class="item haschild"><a href="http://www.mmam.org/Learn"><div><span>Learn</span></div></a><ul class="level0">
-                            <li class="item first"><a href="http://www.mmam.org/Learn/Calendar">Calendar</a></li>
-                            <li class="item"><a href="http://www.mmam.org/Learn/What-Happens-on-a-School-Tour">What Happens on a School Tour</a></li>
-                            <li class="item"><a href="http://www.mmam.org/Learn/Adult-Programs">Adult Programs</a></li>
-                            <li class="item"><a href="http://www.mmam.org/Learn/Family-Programs">Family Programs</a></li>
-                            <li class="item"><a href="http://www.mmam.org/Learn/Schedule-a-Tour">Schedule a Tour</a></li>
-                            <li class="item last"><a href="http://www.mmam.org/Learn/SPARK-Program-for-People-with-Memory-Loss">SPARK: Program for People with Memory Loss</a></li>
-                        </ul>
-                        </li>
-                        <li class="item haschild"><a href="http://www.mmam.org/Interact"><div><span>Interact</span></div></a><ul class="level0">
-                            <li class="item first"><a href="http://www.mmam.org/Interact/Online-Exhibitions">Online Exhibitions</a></li>
-                            <li class="item"><a href="http://www.mmam.org/Interact/Gallery-Interactives">Gallery Interactives</a></li>
-                            <li class="item"><a href="http://www.mmam.org/Interact/MMAM-Art-Stream-Blog">MMAM Art Stream Blog</a></li>
-                            <li class="item last"><a href="http://www.mmam.org/Interact/E-News-Sign-Up">E-News Sign-Up</a></li>
-                        </ul>
-                        </li>
-                        <li class="item haschild"><a href="http://www.mmam.org/Support"><div><span>Support</span></div></a><ul class="level0">
-                            <li class="item first"><a href="http://www.mmam.org/Support/Be-a-Member">Be a Member</a></li>
-                            <li class="item"><a href="http://www.mmam.org/Support/Be-a-Sustainer">Be a Sustainer</a></li>
-                            <li class="item"><a href="http://www.mmam.org/Support/Be-a-Benefactor">Be a Benefactor</a></li>
-                            <li class="item"><a href="http://www.mmam.org/Support/Be-a-Volunteer">Be a Volunteer</a></li>
-                            <li class="item last"><a href="http://www.mmam.org/Support-Our-Organizational-Members">Our Organizational Members</a></li>
-                        </ul>
-                        </li>
-                        <li class="item selected last"><a href="http://www.mmam.org/Shop"><div><span>Shop</span></div></a></li>
-                    </ul>
+                    </div>
+                    <div>
+                        {{> components/common/navigation}}
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<header class="header-nav-bar">
+<!-- <header class="header-nav-bar">
     <div class="container">
         <div class="row">
             <div class="header-nav col-md-12 col-sm-7 col-xs-2">
@@ -466,20 +483,12 @@
             </div>
         </div>
     </div>
-</header>
-
-
-<style>
-
-
-</style>
-
+</header> -->
 
 <header class="header" role="banner">
     <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
         <span class="mobileMenu-toggleIcon">Toggle menu</span>
     </a>
-    {{> components/common/navigation}}
 
     <!--{{#if page_type '===' 'default'}}-->
         <!--<h1 class="header-logo header-logo&#45;&#45;{{theme_settings.logo-position}}">-->
