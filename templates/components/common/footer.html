@@ -78,10 +78,226 @@
                 {{> components/common/geotrust-ssl-seal}}
             </div>
         {{/if}}
-        {{#if theme_settings.show_copyright_footer}}
-            <div class="footer-copyright">
-                <p class="powered-by">&copy; {{moment format="YYYY"}} {{settings.store_name}} </p>
-            </div>
-        {{/if}}
+        <!--{{#if theme_settings.show_copyright_footer}}-->
+            <!--<div class="footer-copyright">-->
+                <!--<p class="powered-by">&copy; {{moment format="YYYY"}} {{settings.store_name}} </p>-->
+            <!--</div>-->
+        <!--{{/if}}-->
     </div>
 </footer>
+
+
+<style>
+
+    /* Temporary styling for the MMAM reproduction */
+    /* All Full Width */
+    .footer {
+        padding: 3rem 0 0;
+    }
+    .mmam.footer-container {
+        margin-right: auto;
+        margin-left: auto;
+        width: 940px;
+    }
+    .mmam.footer-container:before {
+        display: table;
+        line-height: 0;
+        content: "";
+    }
+    .mmam .footer {
+        background: url(http://www.mmam.org/portals/_default/skins/mmam/img/header-line.png) top left no-repeat;
+        margin-top: 20px;
+        padding: 30px 0 60px 0px;
+        font-size: 14px;
+        display: block;
+    }
+    .mmam .footer-wrap1 {
+        width: 620px;
+        float: left;
+        min-height: 1px;
+        margin-left: 20px;
+    }
+    .mmam .nav {
+        margin-bottom: 20px;
+        margin-left: 0;
+        list-style: none;
+    }
+    .mmam li {
+        list-style-type: none!important;
+    }
+    .mmam .nav-tabs:before,
+    .mmam .nav-pills:before,
+    .mmam .nav-tabs:after,
+    .mmam .nav-pills:after {
+        display: table;
+        line-height: 0;
+        content: "";
+        clear: both;
+    }
+    .mmam .nav-tabs > li,
+    .mmam .nav-pills > li {
+        float: left;
+    }
+    .mmam .nav-pills_ li:first-child a {
+        padding-left: 0px;
+    }
+    .mmam .nav-pills_ > li > a {
+        padding: 0px 10px;
+        border-right: 1px solid #1f334c;
+        border-radius: 0px;
+        color: #1f334c;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        display: block;
+    }
+    .mmam .nav-pills_ li:last-child a {
+        border: 0px;
+    }
+    .mmam .nav-pills_ li:last-child a:hover {
+        border: 0px;
+    }
+    .mmam .nav-pills_ > li > a:hover,
+    .mmam .nav-pills_ > li > a:focus {
+        border-right: 1px solid #1f334c;
+        background: none;
+        color: #be8522;
+    }
+    .mmam a:link,
+    .mmam a:visited,
+    .mmam a:hover,
+    .mmam a:active {
+        text-decoration: none;
+        font-family: Arial;
+    }
+    .mmam a,
+    .mmam a:visited {
+        outline: 0;}
+    }
+    .mmam .nav-tabs:after,
+    .mmam .nav-pills:after {
+        clear: both;
+    }
+    .mmam body,
+    .mmam Normal,
+    .mmam p,
+    .mmam td {
+        margin: 0;
+        font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #23425e;
+    }
+    .mmam A.FooterToken:link,
+    .mmam A.FooterToken:visited,
+    .mmam A.FooterToken:active {
+        color: #1f334c;
+        font-weight: normal;
+        font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+        text-decoration: none;
+    }
+    .mmam .footer-wrap2 {
+        width: 300px;
+        float: left;
+        min-height: 1px;
+        margin-left: 20px;
+    }
+    .mmam .footra {
+        float: right;
+        margin-top: 30px;
+        margin-left: 0px;
+    }
+    .mmam .footra li {
+        float: left;
+        margin-left: 5px;
+        margin-right: 5px;
+        list-style: none;
+    }
+
+
+
+
+
+
+    /* Medium Width */
+    @media (max-width: 979px) and (min-width: 768px) {
+        .mmam.footer-container {
+            max-width: 724px;
+            padding: 0;
+            margin: 0 auto;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        .mmam .footer-wrap1 {
+            width: 476px;
+        }
+        .mmam .footer-wrap2 {
+            width: 228px;
+        }
+    }
+
+    @media (min-width: 801px) {
+
+    }
+
+    /* Small Width */
+    @media (max-width: 766px) {
+        .mmam.footer-container {
+            width: auto;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+        .mmam .footer-wrap1,
+        .mmam .footer-wrap2 {
+            display: block;
+            float: none;
+            width: 100%;
+            margin-left: 0;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+    }
+
+    /* Nav change */
+    @media handheld, only screen and (max-width: 760px) {
+
+    }
+
+</style>
+
+<!-- MMAM footer -->
+<div class="mmam footer-container">
+    <footer class="footer">
+        <div class="row">
+            <div class="footer-wrap1">
+                <ul class="FooterToken nav nav-pills nav-pills_ ">
+                    <li><a href="/Facility-Rental">Facility Rental</a></li>
+                    <li><a href="/Staff">Staff</a></li>
+                    <li><a href="/Board-of-Directors">Board of Directors</a></li>
+                    <li><a href="/Employment">Employment</a></li>
+                    <li><a href="/Winona">Winona</a></li>
+                    <li><a href="/MMAM-Stats">MMAM Stats</a></li>
+                </ul>
+                <p><span id="dnn_dnnCOPYRIGHT_lblCopyright" class="FooterToken">&copy; Copyright 2017  Minnesota Marine Art Museum</span>
+                    <br/>
+
+                    <a class="FooterToken" target="_blank" href="http://www.itechra.com">Web Content Management System by Itechra</a><br/>
+                    <span id="dnn_dnnCurrentDate_lblDate" class="SkinObject">Friday, September 8, 2017</span>
+                    <br />
+                    <a id="dnn_dnnLOGIN_loginLink" title="Login" class="userlogin" href="https://www.mmam.org/Login?returnurl=%2fShop">Login</a>
+                    <!--close loginGroup-->
+                </p>
+            </div>
+            <div class="footer-wrap2">
+                <ul class="footra pull-right navx nav-pillsxx nav-clientxx">
+                    <li><a href="http://www.tripadvisor.com/Attraction_Review-g43648-d619837-Reviews-Minnesota_Marine_Art_Museum-Winona_Minnesota.html" target="_blank"><img src="http://www.mmam.org/Portals/_default/Skins/MMAM/img/trip-advisor.png" style="border: 0;" alt=""/></a></li>
+                    <li><a href=" http://www.experiencemississippiriver.com" target="_blank"><img src="http://www.mmam.org/Portals/_default/Skins/MMAM/img/adver.png" style="border: 0;" alt=""/></a></li>
+                    <li><a href="http://www.visitwinona.com" target="_blank"><img src="http://www.mmam.org/Portals/_default/Skins/MMAM/img/winona.png" style="border: 0;" alt=""/></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</div>
+<!--/ MMAM footer -->
+

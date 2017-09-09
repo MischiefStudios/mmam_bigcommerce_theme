@@ -7,6 +7,9 @@
 {{/if}}
 
 
+
+
+
 <style>
     /* Temporary styling for the MMAM reproduction */
     /* All Full Width */
@@ -17,17 +20,19 @@
         font-family: Arial, Helvetica, sans-serif;
         -webkit-font-smoothing: antialiased;
         -webkit-text-size-adjust: 100%;
+        padding-top: 0;
     }
-    .row {
+    .mmam .row {
         display: block;
         margin-left: -20px;
     }
-    .row:after, .row:before {
+    .mmam .row:after,
+    .mmam .row:before {
         display: table;
         line-height: 0;
         content: "";
     }
-    .header-container {
+    .mmam.header-container {
         max-width: 940px;
         padding: 0;
         margin: 0 auto;
@@ -35,33 +40,33 @@
         font: inherit;
         vertical-align: baseline;
     }
-    .header-container:before {
+    .mmam.header-container:before {
         display: table;
         line-height: 0;
         content: "";
     }
-    .header-container .header {
+    .mmam.header-container .header {
         border: none;
         background: url(http://www.mmam.org/portals/_default/skins/mmam/img/header-line.png) bottom left repeat-x; /*../assets/img/mmam/header-line.png*/
         padding: 20px 0 30px 0;
         margin-bottom: 5px;
     }
-    .header-container .header .row:after {
+    .mmam.header-container .header .row:after {
         clear: both;
     }
-    .header-wrap1 {
+    .mmam .header-wrap1 {
         width: 700px;
         float: left;
         min-height: 1px;
         margin-left: 20px;
     }
-    .header-brand {
+    .mmam .header-brand {
         width: 210px;
         height: 84px;
         float: left;
         margin: 0px;
     }
-    .header-brand h1 {
+    .mmam .header-brand h1 {
         font-size: 22.5px;
         line-height: 26px;
         color: #1F334C;
@@ -74,7 +79,10 @@
         padding: 0;
         border: 0;
     }
-    .header-tagline {
+    .mmam .header-logo-image {
+        max-height: none;
+    }
+    .mmam .header-tagline {
         text-transform: uppercase;
         font-size: 28px;
         margin: 0px;
@@ -82,7 +90,7 @@
         color: #839cb2;
         text-align: center;
     }
-    h2.header-tagline {
+    .mmam h2.header-tagline {
         font-family: 'Segoe UI',Arial,Helvetica,sans-serif;
         font-weight: normal;
         text-rendering: optimizelegibility;
@@ -92,22 +100,30 @@
         border: 0;
         vertical-align: baseline;
     }
-    .header-wrap2 {
+    .mmam .header-wrap2 {
         width: 220px;
         float: left;
         min-height: 1px;
         margin-left: 20px;
     }
-    .header-wrap2 .row:after {
+    .mmam .header-wrap2 .row:after {
         clear: both;
     }
-    .header-social {
+    .mmam .header-social {
         float: right;
         margin-top: 20px;
         margin-left: 0px;
         margin-bottom: 5px;
     }
-    ul.header-social {
+    .mmam ul {
+        font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #23425e;
+        padding: 0;
+        margin: 0 0 10px 25px;
+    }
+    .mmam ul.header-social {
         font-family: "Segoe UI", Arial, Helvetica, sans-serif;
         font-size: 14px;
         line-height: 20px;
@@ -119,7 +135,7 @@
         border: 0;
         vertical-align: baseline;
     }
-    ul.header-social li {
+    .mmam ul.header-social li {
         float: left;
         margin-left: 2px;
         list-style: none;
@@ -130,42 +146,46 @@
         font: inherit;
         vertical-align: baseline;
     }
-    .header-hours {
+    .mmam .header-hours {
         color: #839cb2;
         float: right;
         font-size: 14px;
     }
-    .header-wrap3 {
+    .mmam .header-wrap3 {
         width: 940px;
         float: left;
         min-height: 1px;
         margin-left: 20px;
     }
-    #skin_menu {
+    .mmam #skin_menu {
         background: #eeeeee;
     }
-    #mobile_nav {
+    .mmam #mobile_nav {
         display: none;
     }
-    #menuarea {
+    .mmam #menuarea {
         float: left;
         width: 100%;
         position: relative;
         z-index: 903;
         background-color: #FFFFFF;
-        min-height: 40px;
+        /*min-height: 40px;*/
+        -webkit-transition: all 1s ease-in-out;
+        transition: all 1s ease-in-out;
     }
-    #standardMenu {
+    .mmam #standardMenu {
         margin: 0 8px 0 -5px;
         position: relative;
         z-index: 903;
     }
-    #standardMenu a:hover, #standardMenu a:focus, #standardMenu a:active {
+    .mmam #standardMenu a:hover,
+    .mmam #standardMenu a:focus,
+    .mmam #standardMenu a:active {
         color: #be8522;
         text-decoration: underline;
         font-family: "Segoe UI", Arial, Helvetica, sans-serif;
     }
-    #standardMenu ul {
+    .mmam #standardMenu ul {
         margin: 0;
         padding: 0;
         font-family: "Segoe UI", Arial, Helvetica, sans-serif;
@@ -174,14 +194,14 @@
         color: #23425e;
         list-style: none;
     }
-    #standardMenu ul li {
+    .mmam #standardMenu ul li {
         float: left;
         background: none;
         overflow: visible;
         position: relative;
         cursor: pointer;
     }
-    #standardMenu ul li a {
+    .mmam #standardMenu ul li a {
         display: block;
         background: none;
         font-size: 17px;
@@ -191,26 +211,26 @@
         text-shadow: 0 1px 0 #ffffff;
         text-shadow: 0 0 0;
     }
-    #standardMenu ul li a:hover {
+    .mmam #standardMenu ul li a:hover {
         background: none;
         text-decoration: none;
     }
-    #standardMenu ul li a div {
+    .mmam #standardMenu ul li a div {
         display: block;
         background: none;
     }
-    #standardMenu ul li.selected a div span,
-    #standardMenu ul li.breadcrumb a div span {
+    .mmam #standardMenu ul li.selected a div span,
+    .mmam #standardMenu ul li.breadcrumb a div span {
         color: #C88522;
     }
-    #standardMenu ul li a div span {
+    .mmam #standardMenu ul li a div span {
         display: block;
         background: none;
         margin: 0;
         padding: 0 16px;
         line-height: 41px;
     }
-    #standardMenu ul li ul {
+    .mmam #standardMenu ul li ul {
         display: none;
         position: absolute;
         top: 41px;
@@ -220,15 +240,15 @@
         -moz-border-radius: 6px;
         border-radius: 6px;
     }
-    #standardMenu ul li.selected ul, #standardMenu ul li.breadcrumb ul {
+    .mmam #standardMenu ul li.selected ul, #standardMenu ul li.breadcrumb ul {
         display: none;
         position: absolute;
         top: 41px;
     }
-    #standardMenu ul li ul li.first {
+    .mmam #standardMenu ul li ul li.first {
         border-top: none;
     }
-    #standardMenu ul li ul li {
+    .mmam #standardMenu ul li ul li {
         background: #FFFFFF;
         margin: 0px;
         white-space: normal;
@@ -236,7 +256,7 @@
         line-height: 1.5em;
         width: 180px;
     }
-    #standardMenu ul li ul li a {
+    .mmam #standardMenu ul li ul li a {
         display: block;
         background: none;
         text-decoration: none;
@@ -250,71 +270,115 @@
     ul.navPages-list {
         margin-top: 20px;
     }
+    .navPages-container {
+        display: block;
+        height: auto;
+        position: relative;
+    }
     .navPages-item a {
         background-color: #ccc;
         margin: 2px;
         padding-bottom: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     /* Medium Width */
     @media (max-width: 979px) and (min-width: 768px) {
-        .header-container {
+        .mmam.header-container {
             max-width: 724px;
         }
-        .header-wrap1 {
+        .mmam .header-wrap1 {
             width: 538px;
         }
-        .header-tagline {
+        .mmam .header-tagline {
             font-size: 18px;
         }
-        .header-wrap2 {
+        .mmam .header-wrap2 {
             width: 166px;
         }
-        .header-social {
+        .mmam .header-wrap3 {
+            width: 724px;
+        }
+        .mmam .header-social {
             float: right;
             margin-top: 30px;
         }
     }
 
+    @media (min-width: 801px) {
+        .navUser {
+            padding: 0 0;
+        }
+        .navPages {
+            padding: 1.5rem;
+        }
+    }
+
     /* Small Width */
     @media (max-width: 766px) {
-        .row {
+        .mmam .row {
             margin-left: 0;
         }
-        .header-container {
+        .mmam.header-container {
             width: auto;
             padding-right: 20px;
             padding-left: 20px;
         }
-        .header-wrap1, .header-wrap2 {
+        .mmam .header-wrap1,
+        .mmam .header-wrap2 {
             display: block;
             float: none;
             width: 100%;
             margin-left: 0;
             box-sizing: border-box;
         }
-        .header-brand {
+        .mmam .mmam .header-brand {
             width: 210px;
             float: left;
             margin: 0px;
         }
-        .header-tagline {
+        .mmam .header-tagline {
             font-size: 14px;
         }
-        .header-social {
+        .mmam .header-social {
             float: right;
             margin-top: 0px;
         }
-        .header-social li {
+        .mmam .header-social li {
             float: left;
             margin-left: 2px;
             list-style: none;
+        }
+        .mmam .header-wrap3 {
+            width: 100%;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            display: block;
+            float: none;
+            margin-left: 0;
         }
     }
 
     /* Nav change */
     @media handheld, only screen and (max-width: 760px) {
-        #menuclick {
+        .mmam #menuarea {
+            height: 0px;
+            overflow: hidden;
+            float: none;
+            clear: both;
+            width: 100%;
+            background: none;
+            margin-bottom: 0;
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            border-radius: 0px;
+            -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+        }
+        .mmam #menuclick {
             color: #fff;
             text-decoration: none;
             text-transform: uppercase;
@@ -324,24 +388,129 @@
             z-index: 1000;
             padding: 11px 24px 11px 22px;
         }
+        .mmam #mobile_nav {
+            display: block;
+            float: left;
+        }
+        .mmam .mobile_nav_bg {
+            background-color: #666666;
+            color: #FFFFFF;
+            width: 90px;
+            padding-top: 8px;
+            min-height: 34px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0,0.5);
+            -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0,0.5);
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0,0.5);
+        }
+        .mmam #standardMenu {
+            margin: 0;
+            position: relative;
+            z-index: 903;
+            padding: 3px 0;
+            background-color: #ffffff;
+        }
+        .mmam #standardMenu ul {
+            margin: 0;
+            padding: 0;
+        }
+        .mmam #standardMenu ul li {
+            list-style: none;
+            float: none;
+            overflow: visible;
+            position: relative;
+            margin: 0;
+            background: white;
+            height: auto;
+            line-height: 1em;
+            cursor: pointer;
+            border: 1px #ccc solid;
+            margin-bottom: 1px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+        }
+        .mmam #standardMenu ul li a {
+            display: block;
+            background: none;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #28445e;
+        }
+        .mmam #standardMenu ul li a div {
+            display: block;
+            background: none;
+        }
+        .mmam #standardMenu ul li a div span {
+            display: block;
+            background: none;
+            margin: 0;
+            padding: 0 15px;
+            line-height: 32px;
+        }
+        .mmam #standardMenu ul li ul {
+            display: block;
+            position: relative;
+            top: 0;
+            left: auto;
+            padding: 0;
+            border: none;
+            background: #ffffff;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+        }
+        .mmam #standardMenu ul li ul li {
+            background: #ffffff;
+            margin: 0px;
+            white-space: normal;
+            height: auto;
+            line-height: 2em;
+            width: auto;
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            border-radius: 0px;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            border-bottom: 1px dotted #ccc;
+        }
+        .mmam #standardMenu ul li ul li a {
+            display: block;
+            background: none;
+            text-decoration: none;
+            font-weight: normal;
+            text-transform: none;
+            padding: 4px 15px 4px 20px;
+            font-size: 12px;
+            color: #000000;
+        }
+        .mmam #skin_menu {
+            background: #fff;
+        }
+
     }
 
     /* X-small Width */
     @media (max-width: 486px) {
-        .header-brand {
+        .mmam .header-brand {
             width: 130px;
             float: left;
             margin: 0px;
         }
-        .header-tagline {
+        .mmam .header-tagline {
             font-size: 10px;
             line-height: 24px;
         }
-        .header-social {
+        .mmam .header-social {
             float: right;
             margin-top: 0px;
         }
-        .header-social li {
+        .mmam .header-social li {
             float: left;
             margin-left: 2px;
             list-style: none;
@@ -371,14 +540,12 @@
         <!--</div>-->
     <!--</div>-->
 <!--</div>-->
-<div class="header-container">
+<div class="mmam header-container">
     <div class="header">
         <div class="row">
             <div class="header-wrap1">
                 <h1 class="header-brand">
-                    <a href="#" title=Minnesota Marine Art Museum">
                     {{> components/common/store-logo}}
-                    </a>
                 </h1>
                 <h2 class="header-tagline">GREAT ART INSPIRED BY WATER</h2>
             </div>
@@ -418,7 +585,7 @@
             <div id="skin_menu">
                 <div id="mobile_nav">
                     <div class="mobile_nav_bg">
-                        <a href="#" id="menuclick">MENU</a>
+                        <a href="#" onclick="showMenu()" id="menuclick">MENU</a>
                     </div>
                 </div>
                 <div id="menuarea">
@@ -487,7 +654,7 @@
 
 <header class="header" role="banner">
     <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
-        <span class="mobileMenu-toggleIcon">Toggle menu</span>
+        <span>Shop by Category</span> <!--mobileMenu-toggleIcon-->
     </a>
 
     <!--{{#if page_type '===' 'default'}}-->
@@ -505,3 +672,45 @@
     </div>
 
 </header>
+
+<script>
+
+//    function showMenu() {
+//        if (document.getElementById("menuarea").style.display == "block") {
+//            document.getElementById('menuarea').style.display = 'none';
+//        } else {
+//            document.getElementById('menuarea').style.display = 'block';
+//            $("#menuarea").slideToggle();
+//
+//        }
+//    }
+
+    var open = false;
+    var heightChecked = false;
+    var initHeight = 0;
+    var intval = null;
+
+    function showMenu() {
+        window.clearInterval(intval);
+        var menuarea = document.getElementById('menuarea');
+        var standardmenu = document.getElementById('standardMenu');
+        var skinmenu = document.getElementById('skin_menu');
+        if(!heightChecked) {
+            initHeight = standardmenu.offsetHeight;
+            heightChecked = true;
+
+        }
+        if(open) {
+            var h = 0;
+            open = false;
+            skinmenu.style.background = "#ffffff";
+            menuarea.style.height = h + 'px';
+        }
+        else {
+            var h = initHeight;
+            open = true;
+            skinmenu.style.background = "#eeeeee";
+            menuarea.style.height = h + 'px';
+        }
+    }
+</script>
