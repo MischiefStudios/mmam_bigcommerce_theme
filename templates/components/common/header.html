@@ -6,17 +6,13 @@
 </div>
 {{/if}}
 
-
-
-
-
 <style>
     /* Temporary styling for the MMAM reproduction */
     /* All Full Width */
     body {
         color: #444;
         font-size: 12px;
-        line-height: 18px;
+        /*line-height: 18px;*/
         font-family: Arial, Helvetica, sans-serif;
         -webkit-font-smoothing: antialiased;
         -webkit-text-size-adjust: 100%;
@@ -517,29 +513,8 @@
             width: 22px;
         }
     }
-
 </style>
 
-
-<!--<div class="header">-->
-    <!--<div class="row">-->
-        <!--<div class="span9">-->
-            <!--<h1 class="logo"><a id="dnn_dnnLOGO_hypLogo" title="Minnesota Marine Art Museum" href="http://www.mmam.org/"><img id="dnn_dnnLOGO_imgLogo" src="/Portals/0/logo.png" alt="Minnesota Marine Art Museum" style="border-width:0px;"></a></h1>-->
-            <!--<h2 class="slogun2 text-center">Great Art Inspired by Water</h2>-->
-        <!--</div>-->
-        <!--<div class="span3">-->
-            <!--<div class="row">-->
-                <!--<ul class="scohial pull-right">-->
-                    <!--<li><a href="https://www.facebook.com/pages/Minnesota-Marine-Art-Museum/190926643382" target="_blank"><img src="/Portals/_default/Skins/MMAM/img/social_facebook_off.png" onmouseover="this.src='/Portals/_default/Skins/MMAM/img/social_facebook_on.png'" onmouseout="this.src='/Portals/_default/Skins/MMAM/img/social_facebook_off.png'" alt=""> </a></li>-->
-                    <!--<li><a href="https://twitter.com/MMAMArtStream" target="_blank"><img src="/Portals/_default/Skins/MMAM/img/social_twitter_off.png" onmouseover="this.src='/Portals/_default/Skins/MMAM/img/social_twitter_on.png'" onmouseout="this.src='/Portals/_default/Skins/MMAM/img/social_twitter_off.png'" alt=""> </a></li>-->
-                    <!--<li><a href="/Interact/MMAM-Art-Stream"><img src="/Portals/_default/Skins/MMAM/img/social_rss_off.png" onmouseover="this.src='/Portals/_default/Skins/MMAM/img/social_rss_on.png'" onmouseout="this.src='/Portals/_default/Skins/MMAM/img/social_rss_off.png'" alt=""> </a></li>-->
-                    <!--<li><a href="/Learn/Calendar"><img src="/Portals/_default/Skins/MMAM/img/social_calendar_off.png" onmouseover="this.src='/Portals/_default/Skins/MMAM/img/social_calendar_on.png'" onmouseout="this.src='/Portals/_default/Skins/MMAM/img/social_calendar_off.png'" alt=""> </a></li>-->
-                <!--</ul>-->
-            <!--</div>-->
-            <!--<div class="row tright">Hours: Tuesday - Sunday, 10am - 5pm</div>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</div>-->
 <div class="mmam header-container">
     <div class="header">
         <div class="row">
@@ -585,7 +560,7 @@
             <div id="skin_menu">
                 <div id="mobile_nav">
                     <div class="mobile_nav_bg">
-                        <a href="#" onclick="showMenu()" id="menuclick">MENU</a>
+                        <a href="#" onclick="openMenu()" id="menuclick">MENU</a>
                     </div>
                 </div>
                 <div id="menuarea">
@@ -631,7 +606,7 @@
                                     <li class="item last"><a href="http://www.mmam.org/Support-Our-Organizational-Members">Our Organizational Members</a></li>
                                 </ul>
                             </li>
-                            <li class="item selected last"><a href="http://www.mmam.org/Shop"><div><span>Shop</span></div></a></li>
+                            <li class="item selected last"><a href="http://store.mmam.org"><div><span>Shop</span></div></a></li>
                         </ul>
                     </div>
                     <div>
@@ -642,75 +617,43 @@
         </div>
     </div>
 </div>
-<!-- <header class="header-nav-bar">
-    <div class="container">
-        <div class="row">
-            <div class="header-nav col-md-12 col-sm-7 col-xs-2">
-
-            </div>
-        </div>
-    </div>
-</header> -->
 
 <header class="header" role="banner">
     <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
-        <span>Shop by Category</span> <!--mobileMenu-toggleIcon-->
+        <span>Shop by Category</span> <!--class="mobileMenu-toggleIcon"-->
     </a>
-
-    <!--{{#if page_type '===' 'default'}}-->
-        <!--<h1 class="header-logo header-logo&#45;&#45;{{theme_settings.logo-position}}">-->
-            <!--{{> components/common/store-logo}}-->
-        <!--</h1>-->
-    <!--{{else}}-->
-        <!--<div class="header-logo header-logo&#45;&#45;{{theme_settings.logo-position}}">-->
-            <!--{{> components/common/store-logo}}-->
-        <!--</div>-->
-    <!--{{/if}}-->
     {{{region name="header_bottom"}}}
     <div class="navPages-container" id="menu" data-menu>
         {{> components/common/navigation-menu}}
     </div>
-
 </header>
 
 <script>
+var menuopen = false;
+var heightChecked = false;
+var initHeight = 0;
+var intval = null;
 
-//    function showMenu() {
-//        if (document.getElementById("menuarea").style.display == "block") {
-//            document.getElementById('menuarea').style.display = 'none';
-//        } else {
-//            document.getElementById('menuarea').style.display = 'block';
-//            $("#menuarea").slideToggle();
-//
-//        }
-//    }
-
-    var open = false;
-    var heightChecked = false;
-    var initHeight = 0;
-    var intval = null;
-
-    function showMenu() {
-        window.clearInterval(intval);
-        var menuarea = document.getElementById('menuarea');
-        var standardmenu = document.getElementById('standardMenu');
-        var skinmenu = document.getElementById('skin_menu');
-        if(!heightChecked) {
-            initHeight = standardmenu.offsetHeight;
-            heightChecked = true;
-
-        }
-        if(open) {
-            var h = 0;
-            open = false;
-            skinmenu.style.background = "#ffffff";
-            menuarea.style.height = h + 'px';
-        }
-        else {
-            var h = initHeight;
-            open = true;
-            skinmenu.style.background = "#eeeeee";
-            menuarea.style.height = h + 'px';
-        }
+function openMenu() {
+    window.clearInterval(intval);
+    var menuarea = document.getElementById("menuarea");
+    var standardmenu = document.getElementById("standardMenu");
+    var skinmenu = document.getElementById("skin_menu");
+    var h;
+    if (!heightChecked) {
+        initHeight = standardmenu.offsetHeight;
+        heightChecked = true;
     }
+    if (menuopen) {
+        h = 0;
+        menuopen = false;
+        skinmenu.style.background = "#ffffff";
+        menuarea.style.height = h + "px";
+    } else {
+        h = initHeight;
+        menuopen = true;
+        skinmenu.style.background = "#eeeeee";
+        menuarea.style.height = h + "px";
+    }
+}
 </script>
