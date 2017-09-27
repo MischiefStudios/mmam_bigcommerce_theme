@@ -197,6 +197,9 @@
         position: relative;
         cursor: pointer;
     }
+    #standardMenu ul li:hover ul.level0 {
+        display: block;
+    }
     .mmam #standardMenu ul li a {
         display: block;
         background: none;
@@ -236,7 +239,8 @@
         -moz-border-radius: 6px;
         border-radius: 6px;
     }
-    .mmam #standardMenu ul li.selected ul, #standardMenu ul li.breadcrumb ul {
+    .mmam #standardMenu ul li.selected ul,
+    .mmam #standardMenu ul li.breadcrumb ul {
         display: none;
         position: absolute;
         top: 41px;
@@ -262,6 +266,11 @@
         font-size: 12px;
         color: #28445e;
         background-color: #C5D0DA;
+    }
+    .mmam #standardMenu ul li ul li.item a:hover {
+        background-color: #C5D0DA;
+        color: #C88522;
+        cursor: pointer;
     }
     ul.navPages-list {
         margin-top: 20px;
@@ -606,7 +615,7 @@
                                     <li class="item last"><a href="http://www.mmam.org/Support-Our-Organizational-Members">Our Organizational Members</a></li>
                                 </ul>
                             </li>
-                            <li class="item selected last"><a href="http://store.mmam.org"><div><span>Shop</span></div></a></li>
+                            <li class="item selected last"><a href="http://store.mmam.org/categories"><div><span>Shop</span></div></a></li>
                         </ul>
                     </div>
                     <div>
@@ -629,31 +638,31 @@
 </header>
 
 <script>
-var menuopen = false;
-var heightChecked = false;
-var initHeight = 0;
-var intval = null;
+    var expandmenu = false;
+    var heightChecked = false;
+    var initHeight = 0;
+    var intval = null;
 
-function openMenu() {
-    window.clearInterval(intval);
-    var menuarea = document.getElementById("menuarea");
-    var standardmenu = document.getElementById("standardMenu");
-    var skinmenu = document.getElementById("skin_menu");
-    var h;
-    if (!heightChecked) {
-        initHeight = standardmenu.offsetHeight;
-        heightChecked = true;
+    function openMenu() {
+        window.clearInterval(intval);
+        var menuarea = document.getElementById("menuarea");
+        var standardmenu = document.getElementById("standardMenu");
+        var skinmenu = document.getElementById("skin_menu");
+        var h;
+        if (!heightChecked) {
+            initHeight = standardmenu.offsetHeight;
+            heightChecked = true;
+        }
+        if (expandmenu) {
+            h = 0;
+            expandmenu = false;
+            skinmenu.style.background = "#ffffff";
+            menuarea.style.height = h + "px";
+        } else {
+            h = initHeight;
+            expandmenu = true;
+            skinmenu.style.background = "#eeeeee";
+            menuarea.style.height = h + "px";
+        }
     }
-    if (menuopen) {
-        h = 0;
-        menuopen = false;
-        skinmenu.style.background = "#ffffff";
-        menuarea.style.height = h + "px";
-    } else {
-        h = initHeight;
-        menuopen = true;
-        skinmenu.style.background = "#eeeeee";
-        menuarea.style.height = h + "px";
-    }
-}
 </script>

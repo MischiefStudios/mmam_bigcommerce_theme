@@ -22,7 +22,7 @@
     margin-bottom: 5px;
 
     @include breakpoint("medium") {
-        border-bottom: container("border");
+        //border-bottom: container("border");
         overflow: visible;
         position: relative;
     }
